@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element Selector */
+        /* div{
+            background: red;
+        } */
+
+        /* class Selector */
+        .red{
+            background-color: red;
+        }
+
+        /* id selector */
+        #green{
+            background-color: green;
+        }
+
+        /* child selector */
+        div > p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* decendent selector */
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+
+
+        /* universal selector */
+        *{
+            margin: 5px;
+            padding: 5px;
+        }
+
+
+        /* pseudo selector */
+        a:visited{
+            color: rgb(243, 247, 128);
+        }
+        a:link{
+            color:green;
+        }
+        a:active{
+            color: red;
+        }
+        a:hover{
+            background-color: black;
+        }
+
+        p:first-child{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+        I am a div
+        <p>
+            Lorem ipsum dolor sit amet.
+        </p>
+
+    </div>
+    <div id="green">
+        I am another div
+        <article>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </article>
+    </div>
+    <div>
+        <a href="http://www.google.com">go to google</a>
+    </div>
+
+    <div class="one">
+        I am one
+    </div>
+</body>
+</html>
