@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 12px;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1048px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+        }
+        .container{
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1048px; */
+            width: 80vw;
+            /* height: 80vh; */
+            min-height: 80vh;
+            margin: 23px auto;
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        .container div {
+            /* 2em is 2 times of the font size of the div element */
+            /* font-size: 2em; */
+
+            /* rem is 2 times of html font size */
+            font-size: 2rem;
+
+            /* % give 50% width of its parent */
+            width: 50%;
+            border: 2px solid red;
+        }
+
+        .container> div> div{
+            width: 50%;
+            border: 2px solid blue;
+        }
+        .mycont{
+            box-sizing: border-box;
+            border: 2px solid black;
+            margin: 23px auto;
+            color: rgb(195, 126, 255);
+            font-size: 22px;
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is an box
+    </div>
+    <div class="container">
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, unde laboriosam? Modi laudantium quasi, quo aspernatur numquam, neque, porro quis ullam ducimus magnam pariatur tenetur optio. Numquam perspiciatis rem provident non <div>Lorem ipsum dolor sit amet consectetur.</div> autem corrupti soluta odit dolore, itaque sequi impedit architecto quisquam, modi dolorem cupiditate iste! Autem inventore qui minus delectus repellat, saepe ullam. Dignissimos accusantium modi eum incidunt blanditiis? Obcaecati sapiente deleniti possimus at harum neque accusantium.</div>
+    </div>
+    <div class="mycont">
+        I am another container
+    </div>
+</body>
+</html>
