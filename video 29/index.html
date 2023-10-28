@@ -9,23 +9,19 @@
         * {
             margin: 0;
             padding: 0;
-            /* background-color: black; */
+        }
+
+        body {
+            display: flex;
         }
 
         .card {
-            height: 500px;
-            width: 370px;
-            background-color: rgb(224, 223, 221);
             margin: 25px auto;
-            box-sizing: border-box;
         }
 
         .card-inner {
-            position: relative;
-            top: 22.5px;
             margin: auto;
             background-color: rgb(239, 241, 233);
-            height: 90%;
             width: 300px;
             border-radius: 15px;
             padding: 15px;
@@ -42,24 +38,37 @@
             height: 36px;
         }
 
-        span {
+        .img-capsule span {
             background-color: rgba(215, 223, 230, 0.687);
             border-radius: 15px;
             padding: 4px 15px;
             margin: 0 5px;
+            font-size: 13px;
         }
 
 
         .btn {
-            margin-left: 80px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .btn button {
             color: blue;
-            position: absolute;
-            bottom: 10px;
-            width: 80px;
-            padding: 7px;
+            padding: 6px;
             text-align: center;
             border-radius: 15px;
             background-color: rgb(181, 181, 226);
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        .btn button:hover {
+            background-color: rgb(80, 80, 134);
+        }
+
+        p {
+            color: gray;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -83,7 +92,28 @@
                     sit, non repellat.
                 </p>
                 <div class="btn">
-                    Read More
+                    <button>Read More</button>
+                </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-img">
+                <img src="https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk="
+                    alt="image">
+            </div>
+            <div class="img-capsule">
+                <span>Nature</span>
+                <span>Lake</span>
+            </div>
+            <h3>Lorem, ipsum dolor.</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis mollitia nisi voluptas expedita sed
+                    molestiae asperiores numquam animi dolores sequi tempora at vitae cum consequatur quidem doloribus
+                    sit, non repellat.
+                </p>
+                <div class="btn">
+                    <button>Read More</button>
                 </div>
         </div>
     </div>
