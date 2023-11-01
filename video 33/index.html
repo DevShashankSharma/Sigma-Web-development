@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
+            font-family: 'Times New Roman', Times, serif;
         }
-        :root{
-            --backgroundcolor : rgb(11, 55, 198);
-            --secbackgroundcolor : rgba(93, 65, 79, 0.862);
-            --color : rgb(223, 204, 204);
-            --seccolor : rgb(153, 250, 173);
+
+        body {
+            background-color: var(--secondary-color);
         }
-        Nav{
-            display: flex; 
-            background-color: var(--backgroundcolor);
-            color: var(--color);
-            /* background-color: var(--secbackgroundcolor);
-            color: var(--seccolor); */
+
+        :root {
+            --primary-color: rgb(219, 70, 233);
+            --secondary-color: rgb(225, 198, 227);
+            --text-color: rgb(236, 230, 230);
         }
-        a{
+
+        nav {
+            padding: 12px 0px;
+            background-color: var(--primary-color);
+        }
+
+        ul li {
+            display: inline;
+            list-style: none;
             padding: 20px;
             margin: 10px;
         }
+
+        ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
     </style>
 </head>
+
 <body>
-    <Nav>
-        
-            <a>Home</a>
-            <a>About</a>
-            <a>Service</a>
-            <a>Contact</a>
-       
-    </Nav>
+    <header>
+        <Nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Service</a></li>
+                <li><a href="/">Contact</a></li>
+            </ul>
+        </Nav>
+    </header>
 </body>
+
 </html>
