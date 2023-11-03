@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            height: 10vh;
+            background-color: palevioletred;
+            box-sizing: border-box;
+        }
+
+        .boxes {
+            display: flex;
+            background-color: green;
+            justify-content: space-evenly;
+            height: 70vh;
+            width: 97vw;
+            margin: 2vh auto;
+            align-items: center;
+        }
+
+        .box {
+            height: 60vh;
+            width: 60vh;
+            background-color: rgb(61, 61, 221);
+        }
+
+        .box:first-child {
+            background-color: chocolate;
+        }
+
+        .desc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30vh;
+            width: 85vw;
+            border: 2px solid rgb(198, 196, 192);
+            margin: auto;
+            border-radius: 35px;
+        }
+
+        .desc p {
+            color: white;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 5vh;
+            height: 10vh;
+            background-color: white;
+        }
+
+        .logo {
+            position: fixed;
+            bottom: 2vh;
+            right: 1vw;
+            height: 5vw;
+            width: 5vw;
+            border-radius: 50%;
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Service</a></li>
+                <li><a href="/">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="logo"></div>
+
+    <div class="desc">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ea nam neque, commodi laudantium
+            ducimus?
+        </p>
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
