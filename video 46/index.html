@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: azure;
+            height: 80vh;
+            width: 30vw;
+        }
+
+        .box {
+            width: 34px;
+            height: 34px;
+            background-color: aqua;
+            /*animation-name: Shashank;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;  
+            animation-timing-function: ease;
+            animation-direction: alternate;
+            animation-delay: 1s;
+            animation-play-state: running;*/
+            animation: Shashank, Shashank2 3s 1 ease alternate 1s running backwards;
+        }
+
+        @keyframes Shashank {
+            from {
+                background-color: rebeccapurple;
+            }
+
+            to {
+                transform: translate(100px);
+                background-color: red;
+            }
+        }
+
+        @keyframes Shashank2 {
+            0% {
+                transform: rotate(100deg);
+            }
+
+            25% {
+                transform: rotate(150deg);
+            }
+
+            50% {
+                transform: rotate(200deg);
+            }
+
+            75% {
+                transform: rotate(300deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
