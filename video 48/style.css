@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100vw;
+  height: 80vh;
+  background-color: blue;
+  position: relative;
+}
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: bounceY 2s cubic-bezier(0, 0.44, 0.52, 0.98) infinite alternate,
+    bounceX 16s linear infinite alternate;
+  /* animation: bounceX 2s linear infinite alternate; */
+}
+
+@keyframes bounceY {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: 70%;
+  }
+}
+
+@keyframes bounceX {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
+}
