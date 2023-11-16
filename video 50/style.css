@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+img{
+    height: 80vh;
+    width: 30vw;
+    object-fit: contain;
+}
+
+.img1{
+    /* filter: blur(10px); */
+    filter: brightness(110%) contrast(60%);
+}
+
+.img2{
+    filter: grayscale(60%) opacity(0,6);
+}
+
+.img3{
+    filter: invert(1);
+}
