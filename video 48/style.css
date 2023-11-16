@@ -1,23 +1,40 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 .container {
-  width: 100vw;
-  height: 80vh;
-  background-color: blue;
+  width: 150vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, red,yellow,green,blue) ;
+  overflow: hidden;
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  animation: slide 16s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(100vw);
+  }
+  100% {
+    transform: translate(0); /* The image width */
+  }
 }
 .ball {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: red;
+  background-color: rgb(26, 25, 25);
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: bounceY 2s cubic-bezier(0, 0.44, 0.52, 0.98) infinite alternate,
-    bounceX 16s linear infinite alternate;
+  z-index: 10;
+  animation: bounceY 2s cubic-bezier(0, 0.44, 0.52, 0.98) infinite alternate, bounceX 16s linear infinite backwards;
+    /* animation: bounceY 2s cubic-bezier(0, 0.44, 0.52, 0.98) infinite alternate; */
   /* animation: bounceX 2s linear infinite alternate; */
 }
 
