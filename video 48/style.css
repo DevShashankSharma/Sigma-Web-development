@@ -4,8 +4,8 @@
   background-color: black;
 }
 .container {
-  width: 150vw;
-  height: 100vh;
+  width: 800vw;
+  height: 70vh;
   background-image: linear-gradient(to right, red,yellow,green,blue) ;
   overflow: hidden;
   background-repeat: repeat-x;
@@ -13,15 +13,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  animation: slide 16s linear infinite;
+  animation: slide 16s linear infinite forwards;
 }
 
 @keyframes slide {
-  0% {
-    transform: translate(100vw);
-  }
   100% {
-    transform: translate(0); /* The image width */
+    transform: translate(-700vw); /* The image width */
   }
 }
 .ball {
@@ -33,7 +30,7 @@
   bottom: 0;
   left: 0;
   z-index: 10;
-  animation: bounceY 2s cubic-bezier(0, 0.44, 0.52, 0.98) infinite alternate, bounceX 16s linear infinite backwards;
+  animation: bounceY 2s cubic-bezier(0, 0.44, 0.52, 0.98) infinite alternate, bounceX 16s linear infinite forwards;
     /* animation: bounceY 2s cubic-bezier(0, 0.44, 0.52, 0.98) infinite alternate; */
   /* animation: bounceX 2s linear infinite alternate; */
 }
