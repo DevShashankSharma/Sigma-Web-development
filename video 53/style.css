@@ -14,7 +14,7 @@ body {
     background-position: center center;
     background-size: max(1200px, 100vw);
     background-repeat: no-repeat;
-    min-height: 99vh;
+    /* min-height: 99vh; */
     position: relative;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .hero {
-    height: 33rem;
+    height: 38rem;
     padding: 6.5rem;
     margin: 0 7vw;
     display: flex;
@@ -201,19 +201,62 @@ body {
 
 .section2 .obj2 .bg-img {
     width: 40vw;
+    position: relative;
 }
 
-.section2 .obj2 .bg-img img {
-    position: relative;
+.section2 .obj2 .bg-img .rect {
+    width: 22vw;
+    /* height: 84px; */
+    border: 1px solid rgba(255, 255, 255, 0.256);
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 70%;
+    left: 20%;
+}
+
+.section2 .obj2 .bg-img .rect .text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1px;
+    color: white;
+    flex-direction: column;
+}
+
+.section2 .obj2 .bg-img .rect .text h1 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.section2 .obj2 .bg-img .rect .text p {
+    font-size: 12px;
+    font-weight: 100;
+    color: #0071eb;
+}
+
+.section2 .obj2 .bg-img> .rect> :last-child {
+    width: 8vw;
+}
+
+.section2 .obj2 .bg-img> .rect> img {
+    width: 6vw;
+    height: 8vw;
+}
+
+.section2 .obj2 .bg-img> img {
     width: 38vw;
     margin: auto;
 }
 
 .section2 .obj2 .bg-img video {
     position: absolute;
-    width: 27vw;
-    top: 29%;
-    right: 17.2%;
+    width: 28vw;
+    top: 20%;
+    right: 18.2%;
     z-index: -1;
 }
 
@@ -264,6 +307,7 @@ body {
 
 .section3 .obj3 .bg-img {
     width: 40vw;
+    position: relative;
 }
 
 .section3 .obj3 .bg-img img {
@@ -274,9 +318,9 @@ body {
 
 .section3 .obj3 .bg-img video {
     position: absolute;
-    width: 23vw;
-    top: 19%;
-    right: 19%;
+    width: 23.2vw;
+    top: 10%;
+    right: 24%;
     z-index: -1;
 }
 
@@ -292,6 +336,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
 .faq h1 {
@@ -310,12 +355,11 @@ body {
     color: white;
     font-size: 1.5rem;
     text-align: center;
-    margin: 2rem auto;
 }
 
 .faq .que button {
     padding: 1.5rem;
-    width: 70vw;
+    width: 80vw;
     background-color: rgb(45, 45, 45);
     display: flex;
     justify-content: space-between;
@@ -333,7 +377,16 @@ body {
     color: white;
 }
 
-.faq>span {
+.faq .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 5vw;
+}
+
+.faq .info span {
     font-size: 20px;
     font-weight: 400;
     color: white;
@@ -341,24 +394,24 @@ body {
     margin: 2rem auto;
 }
 
-.faq .detail {
+.faq .info .detail {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.faq .detail input {
+.faq .info .detail input {
     line-height: 3;
     background: black;
     border: 1px solid rgba(239, 241, 242, 0.753);
     border-radius: 5px;
     color: white;
-    width: 22vw;
+    width: 27rem;
     padding: 5px;
     margin-right: 1rem;
 }
 
-.faq .detail button {
+.faq .info .detail button {
     background-color: red;
     color: white;
     padding: 5px 25px;
@@ -375,7 +428,7 @@ body {
 footer {
     position: relative;
     min-height: auto;
-    padding: 4.5rem 10rem;
+    padding: 4.5rem 10vw;
 }
 
 footer .foot {
@@ -439,94 +492,269 @@ footer .foot .p2 {
 
 
 
-@media screen and (max-width: 1280px) {
-    .main nav{
+@media screen and (max-width: 1200px) {
+    .main nav {
         width: 98vw;
         padding: 1.5rem 2rem;
     }
-    .hero{
+
+    .hero {
         padding: 6.5rem 2rem;
         margin: 0 4vw;
+    }
+
+    .section2 .obj2 .title {
+        width: 48vw;
+    }
+
+    .section2 .obj2 .bg-img {
+        width: 48vw;
+    }
+
+    .section2 .obj2 .bg-img img {
+        width: 46vw;
+    }
+
+    .section2 .obj2 .bg-img video {
+        width: 34vw;
+        top: 20%;
+        right: 17.2%;
+    }
+
+    .section3 .obj3 .title {
+        width: 48vw;
+    }
+
+    .section3 .obj3 .bg-img {
+        width: 48vw;
+    }
+
+    .section3 .obj3 .bg-img img {
+        width: 46vw;
+    }
+
+    .section3 .obj3 .bg-img video {
+        width: 28vw;
+        top: 11%;
+        right: 23.2%;
+    }
+
+    .section2 .obj2 .bg-img .rect { 
+        top: 70%;
+        left: 22%;
+        width: 25vw;
+    }
+
+
+    .faq .que button {
+        width: 92vw;
+    }
+
+
+
+    footer {
+        padding: 4.5rem 5vw;
+    }
+
+    footer .foot .p2 {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 960px) {
+    .main nav {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .hero {
+        height: auto;
+    }
+
     .hero> :first-child {
         font-size: 35px;
         font-weight: 700;
     }
+
     .hero> :nth-child(2) {
         font-size: 20px;
         font-weight: 400;
     }
+
     .hero> :nth-child(3) {
         font-size: 17px;
         font-weight: 400;
     }
 
-    .section2 .obj2{
+    .section2 .obj2 {
         flex-direction: column;
+        gap: 15px;
     }
-    .section2 .obj2 .title{
+
+    .section2 .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .section2 .obj2 .title {
         width: 80%;
         align-items: center;
     }
-    
+
     .section2 .obj2 .title h1 {
         font-size: 35px;
-        font-weight: 700; 
+        font-weight: 700;
         text-align: center;
     }
-    .section2 .obj2 .title p{
+
+    .section2 .obj2 .title p {
         font-size: 20px;
         font-weight: 400;
         text-align: center;
     }
-    .section2 .obj2 .bg-img video{
-        top: 46%;
-        right: 37.6%;
+
+    .section2 .obj2 .bg-img {
+        width: 90vw;
+        text-align: center;
     }
-    
-    .section3 .obj3{
+
+    .section2 .obj2 .bg-img img {
+        width: 72vw;
+    }
+
+    .section2 .obj2 .bg-img video {
+        width: 53vw;
+        top: 21%;
+        right: 21.2%;
+    }
+
+    .section2 .obj2 .bg-img .rect {
+        top: 70%;
+        left: 29%;
+        width: 38vw;
+    }
+
+    .section2 .obj2 .bg-img> .rect> img {
+        width: 9vw;
+        height: 14vw;
+    }
+
+    .section2 .obj2 .bg-img> .rect> :last-child {
+        width: 14vw;
+    }
+
+
+    .section3 .obj3 {
         flex-direction: column;
+        gap: 15px;
     }
-    .section3 .obj3 .title{
+
+    .section3 .obj3 .title {
         width: 80%;
         align-items: center;
     }
+
     .section3 .obj3 .title h1 {
         font-size: 35px;
-        font-weight: 700; 
+        font-weight: 700;
         text-align: center;
     }
-    .section3 .obj3 .title p{
+
+    .section3 .obj3 .title p {
         font-size: 20px;
         font-weight: 400;
         text-align: center;
     }
-    .section3 .obj3 .bg-img video{
-        top: 39%;
-        right: 39.6%;
+
+    .section3 .obj3 .bg-img {
+        width: 90vw;
+        text-align: center;
+    }
+
+    .section3 .obj3 .bg-img img {
+        width: 72vw;
+    }
+
+    .section3 .obj3 .bg-img video {
+        width: 45vw;
+        top: 9%;
+        right: 25.2%;
+    }
+
+
+    .faq h1 {
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .faq .que button span {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .faq .que button svg {
+        width: 30px;
+    }
+
+    .faq .info .detail input {
+        width: 45vw;
     }
 }
-     
+
 
 @media screen and (max-width: 640px) {
-     .hero div{
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero div {
         flex-direction: column;
-     }
-     .main nav div span{
-        display: none; 
-     }
-     .lang{
+    }
+
+    .hero div button {
+        font-size: 18px;
+    }
+
+    .main nav div span {
+        display: none;
+    }
+
+    .lang {
         width: 38px;
-     }
+    }
+
+    .section2 .obj2 .bg-img .rect {
+        top: 70%;
+        left: 25%;
+        width: 43vw;
+    }
+
+    .faq .info .detail {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .faq .info .detail input {
+        width: 70vw;
+    }
+
+    .faq .info .detail button {
+        font-size: 20px;
+    }
 }
 
-@media screen and (max-width: 400px) {
-    .main nav{
+@media screen and (max-width: 350px) {
+    .hero div input {
+        width: 70vw;
+    }
+
+    .main nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+
+    .section2 .obj2 .bg-img .rect {
+        top: 70%;
+        left: 17%;
+        width: 53vw;
     }
 }
