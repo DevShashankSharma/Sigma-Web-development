@@ -14,7 +14,7 @@ body {
     background-position: center center;
     background-size: max(1200px, 100vw);
     background-repeat: no-repeat;
-    min-height: 98vh;
+    min-height: 99vh;
     position: relative;
 }
 
@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: calc(85.33333333333334% - 0.5rem);
+    width: 94vw;
     margin: auto;
     padding: 1.5rem 3rem;
 }
@@ -98,7 +98,7 @@ body {
 }
 
 .hero> :first-child {
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 900;
 }
 
@@ -129,7 +129,7 @@ body {
     border: 1px solid rgba(239, 241, 242, 0.753);
     border-radius: 5px;
     color: white;
-    width: 22vw;
+    width: max(30vw, 300px);
     padding: 5px;
 }
 
@@ -315,7 +315,7 @@ body {
 
 .faq .que button {
     padding: 1.5rem;
-    width: 65rem;
+    width: 70vw;
     background-color: rgb(45, 45, 45);
     display: flex;
     justify-content: space-between;
@@ -423,4 +423,110 @@ footer .foot .p2 {
     font-size: 1rem;
     font-weight: 400;
     text-align: start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+    .main nav{
+        width: 98vw;
+        padding: 1.5rem 2rem;
+    }
+    .hero{
+        padding: 6.5rem 2rem;
+        margin: 0 4vw;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .hero> :first-child {
+        font-size: 35px;
+        font-weight: 700;
+    }
+    .hero> :nth-child(2) {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .hero> :nth-child(3) {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .section2 .obj2{
+        flex-direction: column;
+    }
+    .section2 .obj2 .title{
+        width: 80%;
+        align-items: center;
+    }
+    
+    .section2 .obj2 .title h1 {
+        font-size: 35px;
+        font-weight: 700; 
+        text-align: center;
+    }
+    .section2 .obj2 .title p{
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .section2 .obj2 .bg-img video{
+        top: 46%;
+        right: 37.6%;
+    }
+    
+    .section3 .obj3{
+        flex-direction: column;
+    }
+    .section3 .obj3 .title{
+        width: 80%;
+        align-items: center;
+    }
+    .section3 .obj3 .title h1 {
+        font-size: 35px;
+        font-weight: 700; 
+        text-align: center;
+    }
+    .section3 .obj3 .title p{
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .section3 .obj3 .bg-img video{
+        top: 39%;
+        right: 39.6%;
+    }
+}
+     
+
+@media screen and (max-width: 640px) {
+     .hero div{
+        flex-direction: column;
+     }
+     .main nav div span{
+        display: none; 
+     }
+     .lang{
+        width: 38px;
+     }
+}
+
+@media screen and (max-width: 400px) {
+    .main nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
 }
