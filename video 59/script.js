@@ -11,38 +11,55 @@ let operation = readline.question();
 // console.log(no1, no2, operation);
 // console.log(typeof no1, typeof no2, typeof operation);
 
-if(fault < 0.1){
-    switch(operation){
-        case "+":
-            console.log(no1 - no2);
-            break;
-        case "-":
-            console.log(no1 / no2);
-            break;
-        case "*":
-            console.log(no1 + no2);
-            break;
-        case "/":
-            console.log(no1 ** no2);
-            break;
-        default:
-            console.log("Invalid Input");
-    }
-}else{
-    switch(operation){
-        case "+":
-            console.log(no1 + no2);
-            break;
-        case "-":
-            console.log(no1 - no2);
-            break;
-        case "*":
-            console.log(no1 * no2);
-            break;
-        case "/":
-            console.log(no1 / no2);
-            break;
-        default:
-            console.log("Invalid Input");
-    }
+// if(fault < 0.1){
+//     switch(operation){
+//         case "+":
+//             console.log(no1 - no2);
+//             break;
+//         case "-":
+//             console.log(no1 / no2);
+//             break;
+//         case "*":
+//             console.log(no1 + no2);
+//             break;
+//         case "/":
+//             console.log(no1 ** no2);
+//             break;
+//         default:
+//             console.log("Invalid Input");
+//     }
+// }else{
+//     switch(operation){
+//         case "+":
+//             console.log(no1 + no2);
+//             break;
+//         case "-":
+//             console.log(no1 - no2);
+//             break;
+//         case "*":
+//             console.log(no1 * no2);
+//             break;
+//         case "/":
+//             console.log(no1 / no2);
+//             break;
+//         default:
+//             console.log("Invalid Input");
+//     }
+// }
+
+
+let obj = {
+    "+" : "-",
+    "*" : "+",
+    "-" : "/",
+    "/" : "**",
+}
+
+if(fault<0.1){
+    // Perform wrong calculation
+    operation = obj[operation];
+    console.log(`The result is ${eval(`${no1} ${operation} ${no2}`)}`);
+}
+else{
+    console.log(`The result is ${eval(`${no1} ${operation} ${no2}`)}`);
 }
