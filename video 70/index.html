@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            height: 500px;
+        }
+
+        .box {
+            background-color: rgb(144, 144, 223);
+            border-radius: 5px;
+            padding: 20px;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        let color = {
+            1: 'rgb(250, 216, 235)',
+            2: 'rgb(196, 191, 191)',
+            3: 'rgb(246, 238, 207)',
+            4: 'rgb(185, 204, 157)',
+            5: 'rgb(157, 188, 204)',
+            6: 'black',
+            7: 'rgb(153, 153, 153)',
+        }
+
+        let bgColor = {
+            1: 'rgb(144, 144, 223)',
+            2: 'rgb(130, 63, 63)',
+            3: 'rgb(215, 190, 151)',
+            4: 'rgb(208, 173, 179)',
+            5: 'rgb(243, 220, 242)',
+            6: 'rgb(255, 255, 255)',
+            7: 'rgb(0, 0, 0)',
+        }
+
+        boxes.forEach(box => {
+            box.addEventListener('mouseover', () => {
+                let number = Math.floor(Math.random() * 7) + 1;
+                box.style.backgroundColor = bgColor[number];
+                box.style.color = color[number];
+                box.style.border = '2px solid ' + color[number];
+            })
+        })
+    </script>
+</body>
+
+</html>
