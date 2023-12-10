@@ -24,6 +24,10 @@
             font-weight: bold;
             font-family: sans-serif;
             border: 2px solid black;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -39,7 +43,7 @@
 
     <script>
         const boxes = document.querySelectorAll('.box');
-        let color = {
+        /*let color = {
             1: 'rgb(250, 216, 235)',
             2: 'rgb(196, 191, 191)',
             3: 'rgb(246, 238, 207)',
@@ -65,6 +69,35 @@
                 box.style.backgroundColor = bgColor[number];
                 box.style.color = color[number];
                 box.style.border = '2px solid ' + color[number];
+            })
+        }) */
+
+        const getRandomColor = () => {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        boxes.forEach(box => {
+            /*let getRC = confirm('Do you want a random color?');
+            
+            while (getRC) {
+                let color = getRandomColor();
+                let backgroundColor = getRandomColor();
+                let borderColor = getRandomColor();
+                box.style.border = '2px solid ' + borderColor;
+                box.style.backgroundColor =  backgroundColor;
+                box.style.color = color;
+                getRC = confirm('Do you want a random color?');
+            }*/
+            box.addEventListener('mouseover', () => {
+                let color = getRandomColor();
+                let backgroundColor = getRandomColor();
+                let borderColor = getRandomColor();
+                box.style.border = '2px solid ' + borderColor;
+                box.style.backgroundColor = backgroundColor;
+                box.style.color = color;
             })
         })
     </script>
