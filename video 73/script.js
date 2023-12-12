@@ -33,11 +33,23 @@ function createCard(url, timestamp, title, author, published_date, views) {
   i.style.backgroundRepeat = "no-repeat";
 }
 
-createCard(
-  "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ",
-  "30:32",
-  "Welcome to JavaScript Tutorial",
-  "CWH",
-  "30-12-2021",
-  "200k"
-);
+// createCard(
+//   "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ",
+//   "30:32",
+//   "Welcome to JavaScript Tutorial",
+//   "CWH",
+//   "30-12-2021",
+//   "200k"
+// );
+
+document.querySelector("#submit").addEventListener("click", function () {
+  let name = document.querySelector("#cardName").value;
+  let timestamp = document.querySelector("#timestamp").value;
+  let title = document.querySelector("#detail").value;
+  let author = document.querySelector("#author").value;
+  let published_date = document.querySelector("#published-date").value;
+  let views = document.querySelector("#views").value;
+  let url = document.querySelector("#url").value;
+
+  createCard(url, timestamp, title, author, published_date, views);
+});
