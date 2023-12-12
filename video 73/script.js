@@ -11,26 +11,25 @@ document.querySelector("#url").addEventListener("keyup", function () {
 
 function createCard(url, timestamp, title, author, published_date, views) {
   let div = document.createElement("div");
-  div.innerHTML = `<div class="card">
-                            <div class="card-img">
-                                <div class="timestamp">${timestamp}</div>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-title">${title}</div> 
-                                <div class="about">
-                                    <div class="card-author">${author}</div>
-                                    <div class="card-date">${published_date}</div>
-                                    <div class="card-views">${views}</div>
-                                </div>
-                            </div>
-                        </div>`;
+  div.classList.add("card");
+  div.innerHTML = `<div class="c-img">
+                  <div class="card-img">
+                      <img src="${url}">
+                      <div class="timestamp">${timestamp}</div>
+                  </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">${title}</div> 
+                    <div class="about">
+                        <div class="card-author">${author}</div>
+                        <div class="card-date">${published_date}</div>
+                        <div class="card-views">${
+                          Math.round(views / 100) / 10
+                        }K</div>
+                    </div>
+                </div> `;
 
   document.querySelector(".container").appendChild(div);
-  let i = document.querySelector(".card-img");
-  i.style.backgroundImage = `url(${url})`;
-  i.style.backgroundSize = "cover";
-  i.style.backgroundPosition = "center";
-  i.style.backgroundRepeat = "no-repeat";
 }
 
 // createCard(
@@ -50,6 +49,5 @@ document.querySelector("#submit").addEventListener("click", function () {
   let published_date = document.querySelector("#published-date").value;
   let views = document.querySelector("#views").value;
   let url = document.querySelector("#url").value;
-
   createCard(url, timestamp, title, author, published_date, views);
 });

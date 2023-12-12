@@ -4,26 +4,37 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 100%;
-    min-height: 40vh;
+.shape {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 60vw;
+    height: 654px;
+    display: flex;
+    justify-content: flex-start; 
     flex-direction: column;
-    border: 2px solid black; 
+    /* border: 2px solid black;  */
     padding: 20px;
+    overflow-y: auto;
 }
 
 .getDetails {
+    width: 40vw;
+    height: 654px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* flex-direction: column; */
-    border: 2px solid black;
+    flex-direction: column;
+    /* border: 2px solid black; */
     color: white;
-    padding: 20px;
-    margin-top: 10px;
+    /* padding: 20px;
+    margin-top: 10px; */
 
 }
 
@@ -128,22 +139,32 @@ input[type=date] {
     justify-content: space-evenly;
     align-items: center; 
     border: 1px solid black; 
-    padding: 20px;
+    padding: 7px;
     margin-top: 10px;
     background-color: black;
     color: white;
-    width: 70vw;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.c-img{
+    width: 30%;
 }
 
 .card-img{
-    height: 8rem;
-    width: 14rem;
-    /* background-image: url("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ"); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
+    height: 122px;
+    width: 220px; 
+    position: relative; 
     border-radius: 10px;
-    position: relative;
+}
+
+.card-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 .timestamp{
@@ -162,12 +183,13 @@ input[type=date] {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; 
-    margin-left: 2vw;
+    margin-left: 10px;
+    width: 60%;
 }
 
 .card-title{
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 .about{
