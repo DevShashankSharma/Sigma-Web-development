@@ -25,7 +25,7 @@ function createCard(url, timestamp, title, author, published_date, views) {
                         <div class="card-date">${published_date}</div>
                         <div class="card-views">${
                           Math.round(views / 100) / 10
-                        }K</div>
+                        }K views</div>
                     </div>
                 </div> `;
 
