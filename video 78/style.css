@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f5c2f;
+}
+
+.loader {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 3em;
+    font-family: sans-serif; 
+    text-align: center;
+    line-height: 0.7;
+}
+
+@keyframes blink {
+    50% {
+        color: transparent;
+    }
+}
+
+.loader__dot { 
+    font-size: 50px;
+    margin: 4px; 
+    animation: 2s blink infinite;
+}
+
+.loader__dot:nth-child(2) {
+    animation: 1.75s blink infinite;
+    animation-delay: .25s;
+}
+
+.loader__dot:nth-child(3) {
+    animation: 1.5s blink infinite;
+    animation-delay: .5s;
+}
