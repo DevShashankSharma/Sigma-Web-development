@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik+Doodle+Shadow&family=Ubuntu:wght@300&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,21 +12,28 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #2f5c2f;
+    /* background: green;
+    color: white; */
+    background-color: #0d1e00;
+    color: #023c02;
 }
 
 .loader {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    margin: 5vw;
 }
 
 .title {
-    font-size: 3em;
-    font-family: sans-serif; 
+    font-size: 2em;
+    font-family: 'Ubuntu', sans-serif;
     text-align: center;
     line-height: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 50px;
 }
 
 @keyframes blink {
@@ -32,7 +42,7 @@ body {
     }
 }
 
-.loader__dot { 
+/* .loader__dot { 
     font-size: 50px;
     margin: 4px; 
     animation: 2s blink infinite;
@@ -46,4 +56,4 @@ body {
 .loader__dot:nth-child(3) {
     animation: 1.5s blink infinite;
     animation-delay: .5s;
-}
+} */
