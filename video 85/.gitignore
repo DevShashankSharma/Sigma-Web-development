@@ -1,0 +1,7 @@
+git rm --cached .gitignore
+git rm --cached README.md
+git rm --cached LICENSE
+git rm --cached CHANGELOG.md
+
+# ignoring node_modules
+git rm --cached node_modules

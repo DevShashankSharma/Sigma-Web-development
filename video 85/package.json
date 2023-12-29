@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "slugify": "^1.6.6"
+  },
+  "name": "savvy",
+  "version": "1.0.0",
+  "description": "this is an music app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "savvy"
+  ],
+  "author": "shashank",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "Sigma-Web-development"
+  }
+}
