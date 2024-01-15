@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Employee Information</h1>
+  <label for="UserName">Name</label>
+  <input type="text" name="UserName" id="UserName" required>
+
+  <label for="salary">Salary</label>
+  <input type="number" name="salary" id="salary" required>
+
+  <label for="language">Programming language</label>
+  <input type="text" name="language" id="language">
+
+  <label for="city">City</label>
+  <input type="text" name="city" id="city">
+
+  <label for="isManager">Is Manager</label>
+  <input type="radio" name="isManager" id="isManager" value="yes">Yes
+  <input type="radio" name="isManager" id="isManager" value="no">No
+
+  <button onclick="postData()">Generate data</button>
+
+  <script>
+    function postData() {
+      const UserName = document.getElementById('UserName').value;
+      const salary = document.getElementById('salary').value;
+      const language = document.getElementById('language').value;
+      const city = document.getElementById('city').value;
+      const isManager = document.querySelector('input[name="isManager"]:checked').value;
+
+      const data = {
+        name: UserName,
+        salary: parseInt(salary),
+        language: language,
+        city: city,
+        isManager: isManager
+      };
+
+      fetch('http://localhost:3000/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => response.json())
+      .then(result => {
+        console.log('Success:', result);
+        // Handle success, if needed
+      })
+      .catch(error => {
+        console.log('Error:', error);
+        // Handle error, if needed
+      });
+    }
+  </script>
+</body>
+</html>
