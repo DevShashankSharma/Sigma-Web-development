@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 import express from "express";
 import { Employee } from "./models/employee.js";
-import cors from "cors";
 
 // Connecting with the database
 mongoose.connect("mongodb://localhost:27017/company");
@@ -10,58 +9,45 @@ mongoose.connect("mongodb://localhost:27017/company");
 const app = express();
 const port = 3000;
 
-// Middleware to parse JSON in request body
-app.use(express.json());
-app.use(cors());
-
-app.post("/", async (req, res) => {
-  try {
-    const employee = new Employee({
-      name: req.body.name,
-      salary: req.body.salary,
-      language: req.body.language,
-      city: req.body.city,
-      isManager: req.body.isManager == "yes" ? true : false,
-    });
-    await employee.save();
-    console.log(employee,"Employee data saved successfully!");
-    res.json({ message: "Employee data saved successfully!" });
-  } catch (error) {
-    console.error("Error saving employee data:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
+app.set("view engine", "ejs"); // set the view engine to ejs
 
 app.get("/", async (req, res) => {
   try {
-    //Delete all data
+    res.render("index", { foo: "FOO" });
+  } catch (error) {
+    console.error("Error retrieving employee data:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+const randomNumber = (obj) => {
+  return Math.floor(Math.random() * obj.length);
+};
+
+let name = ["John", "Jane", "Bob"];
+let salary = [1000, 2000, 3000];
+let language = ["JavaScript", "Python", "Java"];
+let city = ["New York", "Los Angeles", "Chicago"];
+
+app.get("/generate", async (req, res) => {
+  try {
     await Employee.deleteMany({});
-    // Retrieve all employee data
-    const data = await Employee.find();
-    res.json(data);
-  } catch (error) {
-    console.error("Error retrieving employee data:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
 
-app.get("/check", async (req, res) => {
-  try {
-    const data = await Employee.find(req.query);
-    console.log(data)
-    res.json(data);
-  } catch (error) {
-    console.error("Error retrieving employee data:", error);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
+    // Generate employee data
+    for (let i = 0; i < 10; i++) {
+      let e = await Employee.create({
+        name: name[randomNumber(name)],
+        salary: salary[randomNumber(salary)],
+        language: language[randomNumber(language)],
+        city: city[randomNumber(city)],
+        isManager: Math.random() < 0.5 ? true : false,
+      });
+      console.log(e);
+    }
 
-app.delete("/remove", async (req, res) => {
-  try {
-    const data = await Employee.deleteOne(req.query);
-    res.json(data);
+    res.json({ message: "Employee data generated successfully" });
   } catch (error) {
-    console.error("Error retrieving employee data:", error);
+    console.error("Error generating employee data:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
