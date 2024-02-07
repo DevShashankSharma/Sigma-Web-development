@@ -15,7 +15,7 @@ function App() {
       <div className="container grid grid-cols-3 gap-4 items-center justify-center">
         {posts.map((post) => {
           return (
-            <div className="card flex flex-col gap-2 bg-red-50 h-[100%]">
+            <div key={post.id} className="card flex flex-col gap-2 bg-red-50 h-[100%]">
               <div className="title font-bold text-2xl">
                 {post.title ? post.title : "No title"}
               </div>
